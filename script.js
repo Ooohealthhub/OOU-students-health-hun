@@ -45,4 +45,31 @@ questionCard.className = ‘form-card’;
 questionCard.innerHTML = <h3>Ask a Health Question</h3> <p class="form-intro">Have a health question? Submit it through our secure questionnaire.</p> <a class="button button-primary full-width" href="https://docs.google.com/forms/d/e/1FAIpQLSdHnnnuYnUepSlAhta5d1hSaOL12DPOTgFXLH6B6gTw8DX1Ig/viewform" target="_blank" rel="noopener noreferrer"> Submit Your Question ↗ </a> <p class="form-footnote">Please avoid including personal or identifying medical information.</p>;
 
 questionForm.replaceWith(questionCard);
+} const volunteerForm = document.getElementById('volunteerForm');
+
+if (volunteerForm) {
+  const volunteerCard = document.createElement('div');
+  volunteerCard.className = 'form-card';
+
+  volunteerCard.innerHTML = `
+    <h3>Join Our Volunteer Team</h3>
+    <p class="form-intro">
+      Join us in promoting health awareness, organising outreach programmes,
+      supporting first-aid training, and improving student wellbeing.
+    </p>
+
+    <a class="button button-primary full-width"
+       href="https://docs.google.com/forms/d/e/1FAIpQLSda9c1UzmERy723ai97EELrW3LhWBeqC2zk_rj8OFdWHzVl_g/viewform"
+       target="_blank"
+       rel="noopener noreferrer">
+       Register as a Volunteer ↗
+    </a>
+
+    <p class="form-footnote">
+      Complete the form to register your interest in volunteering
+      with the OOU Students' Union Health Hub.
+    </p>
+  `;
+
+  volunteerForm.replaceWith(volunteerCard);
 }
