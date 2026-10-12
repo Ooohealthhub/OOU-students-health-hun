@@ -36,3 +36,13 @@ document.getElementById('feedbackForm')?.addEventListener('submit', event => {
   event.preventDefault();
   setStatus('feedbackStatus', 'Demo only: your feedback has not been sent or saved. A submission service must be connected before launch.');
 });
+const questionForm = document.getElementById(‘questionForm’);
+
+if (questionForm) {
+const questionCard = document.createElement(‘div’);
+questionCard.className = ‘form-card’;
+
+questionCard.innerHTML = <h3>Ask a Health Question</h3> <p class="form-intro">Have a health question? Submit it through our secure questionnaire.</p> <a class="button button-primary full-width" href="https://docs.google.com/forms/d/e/1FAIpQLSdHnnnuYnUepSlAhta5d1hSaOL12DPOTgFXLH6B6gTw8DX1Ig/viewform" target="_blank" rel="noopener noreferrer"> Submit Your Question ↗ </a> <p class="form-footnote">Please avoid including personal or identifying medical information.</p>;
+
+questionForm.replaceWith(questionCard);
+}
