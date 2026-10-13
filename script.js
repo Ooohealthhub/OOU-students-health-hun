@@ -96,14 +96,23 @@ if (volunteerForm) {
 }
 // FEEDBACK FORM
 const feedbackForm = document.getElementById('feedbackForm');
-
 if (feedbackForm) {
   feedbackForm.addEventListener('submit', event => {
     event.preventDefault();
-
+    if (!feedbackForm.checkValidity()) {
+      feedbackForm.reportValidity();
+      return;
+    }
+    const feedbackURL =
+      'https://docs.google.com/forms/d/e/1FAIpQLSecsrHM8x17EAo1fsCKNOodg-H_EUNUP13UI2HPVycmS3Emfg/viewform';
     setStatus(
       'feedbackStatus',
-      'This demonstration form does not send or save your feedback. Please use the official feedback link on this page.'
+      'Opening the official feedback form...'
+    );
+    window.open(
+      feedbackURL,
+      '_blank',
+      'noopener,noreferrer'
     );
   });
 }
