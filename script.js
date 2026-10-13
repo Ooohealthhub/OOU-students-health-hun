@@ -53,17 +53,14 @@ function setStatus(id, message) {
     target.textContent = message;
   }
 }
-
 // HEALTH QUESTION FORM
 const questionForm = document.getElementById('questionForm');
-
 if (questionForm) {
   questionForm.addEventListener('submit', event => {
     event.preventDefault();
-
     setStatus(
       'questionStatus',
-      'This demonstration form does not send or save your question. Please use the official health-question link on this page.'
+      'Please use the official Ask a Health Question button below to submit your question.'
     );
   });
 }
