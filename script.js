@@ -1,99 +1,97 @@
+// ========================================
+// OOU STUDENTS' UNION HEALTH HUB
+// Main JavaScript
+// ========================================
+
+// MOBILE NAVIGATION
 const menuToggle = document.getElementById('menuToggle');
 const mainNav = document.getElementById('mainNav');
 
-menuToggle?.addEventListener('click', () => {
-  const open = mainNav.classList.toggle('open');
-  menuToggle.setAttribute('aria-expanded', String(open));
-});
-mainNav?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-  mainNav.classList.remove('open');
-  menuToggle?.setAttribute('aria-expanded', 'false');
-}));
-document.getElementById('year').textContent = new Date().getFullYear();
+if (menuToggle && mainNav) {
+  menuToggle.addEventListener('click', () => {
+    const isOpen = mainNav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+  });
 
+  mainNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mainNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
+
+// CURRENT YEAR
+const yearElement = document.getElementById('year');
+
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear();
+}
+
+// ANONYMOUS HEALTH QUESTIONS
 const anonymous = document.getElementById('anonymous');
 const questionName = document.getElementById('questionName');
-anonymous?.addEventListener('change', () => {
-  questionName.disabled = anonymous.checked;
-  if (anonymous.checked) questionName.value = '';
-});
-if (anonymous && questionName) questionName.disabled = anonymous.checked;
 
-// These forms are deliberately front-end prototypes. They do not transmit or persist user data.
+if (anonymous && questionName) {
+  const updateNameField = () => {
+    questionName.disabled = anonymous.checked;
+
+    if (anonymous.checked) {
+      questionName.value = '';
+    }
+  };
+
+  anonymous.addEventListener('change', updateNameField);
+  updateNameField();
+}
+
+// FORM STATUS HELPER
 function setStatus(id, message) {
   const target = document.getElementById(id);
-  if (target) target.textContent = message;
+
+  if (target) {
+    target.textContent = message;
+  }
 }
-document.getElementById('questionForm')?.addEventListener('submit', event => {
-  event.preventDefault();
-  setStatus('questionStatus', 'Demo only: your question has not been sent or saved. A secure submission service must be connected before launch.');
-});
-document.getElementById('volunteerForm')?.addEventListener('submit', event => {
-  event.preventDefault();
-  setStatus('volunteerStatus', 'Demo only: your volunteer request has not been sent or saved. A submission service must be connected before launch.');
-});
-document.getElementById('feedbackForm')?.addEventListener('submit', event => {
-  event.preventDefault();
-  setStatus('feedbackStatus', 'Demo only: your feedback has not been sent or saved. A submission service must be connected before launch.');
-});
-const questionForm = document.getElementById(‘questionForm’);
+
+// HEALTH QUESTION FORM
+const questionForm = document.getElementById('questionForm');
 
 if (questionForm) {
-const questionCard = document.createElement(‘div’);
-questionCard.className = ‘form-card’;
+  questionForm.addEventListener('submit', event => {
+    event.preventDefault();
 
-questionCard.innerHTML = <h3>Ask a Health Question</h3> <p class="form-intro">Have a health question? Submit it through our secure questionnaire.</p> <a class="button button-primary full-width" href="https://docs.google.com/forms/d/e/1FAIpQLSdHnnnuYnUepSlAhta5d1hSaOL12DPOTgFXLH6B6gTw8DX1Ig/viewform" target="_blank" rel="noopener noreferrer"> Submit Your Question ↗ </a> <p class="form-footnote">Please avoid including personal or identifying medical information.</p>;
+    setStatus(
+      'questionStatus',
+      'This demonstration form does not send or save your question. Please use the official health-question link on this page.'
+    );
+  });
+}
 
-questionForm.replaceWith(questionCard);
-} const volunteerForm = document.getElementById('volunteerForm');
+// VOLUNTEER FORM
+const volunteerForm = document.getElementById('volunteerForm');
 
 if (volunteerForm) {
-  const volunteerCard = document.createElement('div');
-  volunteerCard.className = 'form-card';
+  volunteerForm.addEventListener('submit', event => {
+    event.preventDefault();
 
-  volunteerCard.innerHTML = `
-    <h3>Join Our Volunteer Team</h3>
-    <p class="form-intro">
-      Join us in promoting health awareness, organising outreach programmes,
-      supporting first-aid training, and improving student wellbeing.
-    </p>
+    setStatus(
+      'volunteerStatus',
+      'This demonstration form does not send or save your details. Please use the official volunteer registration link on this page.'
+    );
+  });
+}
 
-    <a class="button button-primary full-width"
-       href="https://docs.google.com/forms/d/e/1FAIpQLSda9c1UzmERy723ai97EELrW3LhWBeqC2zk_rj8OFdWHzVl_g/viewform"
-       target="_blank"
-       rel="noopener noreferrer">
-       Register as a Volunteer ↗
-    </a>
-
-    <p class="form-footnote">
-      Complete the form to register your interest in volunteering
-      with the OOU Students' Union Health Hub.
-    </p>
-  `;
-
-  volunteerForm.replaceWith(volunteerCard);
-} const feedbackForm = document.getElementById('feedbackForm');
+// FEEDBACK FORM
+const feedbackForm = document.getElementById('feedbackForm');
 
 if (feedbackForm) {
-  const feedbackCard = document.createElement('div');
-  feedbackCard.className = 'form-card';
+  feedbackForm.addEventListener('submit', event => {
+    event.preventDefault();
 
-  feedbackCard.innerHTML = `
-    <h3>Share Your Feedback</h3>
-    <p class="form-intro">
-      Help us improve the OOU Students' Union Health Hub.
-      Your voice matters!
-    </p>
-    <a class="button button-primary full-width"
-       href="https://docs.google.com/forms/d/e/1FAIpQLSecsrHM8x17EAo1fsCKNOodg-H_EUNUP13UI2HPVycmS3Emfg/viewform"
-       target="_blank"
-       rel="noopener noreferrer">
-       Submit Your Feedback ↗
-    </a>
-    <p class="form-footnote">
-      Please avoid including sensitive personal or medical information.
-    </p>
-  `;
-
-  feedbackForm.replaceWith(feedbackCard);
+    setStatus(
+      'feedbackStatus',
+      'This demonstration form does not send or save your feedback. Please use the official feedback link on this page.'
+    );
+  });
 }
