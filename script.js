@@ -72,4 +72,28 @@ if (volunteerForm) {
   `;
 
   volunteerForm.replaceWith(volunteerCard);
+} const feedbackForm = document.getElementById('feedbackForm');
+
+if (feedbackForm) {
+  const feedbackCard = document.createElement('div');
+  feedbackCard.className = 'form-card';
+
+  feedbackCard.innerHTML = `
+    <h3>Share Your Feedback</h3>
+    <p class="form-intro">
+      Help us improve the OOU Students' Union Health Hub.
+      Your voice matters!
+    </p>
+    <a class="button button-primary full-width"
+       href="https://docs.google.com/forms/d/e/1FAIpQLSecsrHM8x17EAo1fsCKNOodg-H_EUNUP13UI2HPVycmS3Emfg/viewform"
+       target="_blank"
+       rel="noopener noreferrer">
+       Submit Your Feedback ↗
+    </a>
+    <p class="form-footnote">
+      Please avoid including sensitive personal or medical information.
+    </p>
+  `;
+
+  feedbackForm.replaceWith(feedbackCard);
 }
