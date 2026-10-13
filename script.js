@@ -70,18 +70,30 @@ if (questionForm) {
 
 // VOLUNTEER FORM
 const volunteerForm = document.getElementById('volunteerForm');
-
 if (volunteerForm) {
   volunteerForm.addEventListener('submit', event => {
     event.preventDefault();
-
+    // Check that all required fields are completed
+    if (!volunteerForm.checkValidity()) {
+      volunteerForm.reportValidity();
+      return;
+    }
+    // Official volunteer registration form
+    const volunteerRegistrationURL =
+      'https://docs.google.com/forms/d/e/1FAIpQLSda9c1UzmERy723ai97EELrW3LhWBeqC2zk_rj8OFdWHzVl_g/viewform';
+    // Inform the volunteer before opening the registration form
     setStatus(
       'volunteerStatus',
-      'This demonstration form does not send or save your details. Please use the official volunteer registration link on this page.'
+      'Your details are ready. Opening the official volunteer registration form...'
+    );
+    // Open the official form in a new tab
+    window.open(
+      volunteerRegistrationURL,
+      '_blank',
+      'noopener,noreferrer'
     );
   });
 }
-
 // FEEDBACK FORM
 const feedbackForm = document.getElementById('feedbackForm');
 
