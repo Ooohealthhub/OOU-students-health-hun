@@ -55,16 +55,30 @@ function setStatus(id, message) {
 }
 // HEALTH QUESTION FORM
 const questionForm = document.getElementById('questionForm');
+
 if (questionForm) {
   questionForm.addEventListener('submit', event => {
     event.preventDefault();
-    setStatus(
-      'questionStatus',
-      'Please use the official Ask a Health Question button below to submit your question.'
-    );
+
+    const healthQuestionURL =
+      'https://docs.google.com/forms/d/e/1FAIpQLSdHnnnuYnUepSlAhta5d1hSaOL12DPOTgFXLH6B6gTw8DX1Ig/viewform';
+
+    window.location.href = healthQuestionURL;
   });
 }
+// HEALTH QUESTION FORM
+const questionForm = document.getElementById('questionForm');
 
+if (questionForm) {
+  questionForm.addEventListener('submit', event => {
+    event.preventDefault();
+
+    const healthQuestionURL =
+      'https://docs.google.com/forms/d/e/1FAIpQLSdHnnnuYnUepSlAhta5d1hSaOL12DPOTgFXLH6B6gTw8DX1Ig/viewform';
+
+    window.location.href = healthQuestionURL;
+  });
+}
 // VOLUNTEER FORM
 const volunteerForm = document.getElementById('volunteerForm');
 if (volunteerForm) {
