@@ -176,8 +176,54 @@
     </section>
 
     <section class="join-section" id="volunteer">
-      <div class="container join-layout"><div><p class="eyebrow">BE PART OF THE IMPACT</p><h2>Help build a healthier<br>student community.</h2><p>Support health awareness, outreach, communications, event coordination and student engagement.</p></div><form class="join-form" id="volunteerForm"><label for="volName">Name *</label><input id="volName" required maxlength="80" placeholder="Your name"><label for="volCampus">Campus *</label><select id="volCampus" required><option value="">Select campus</option><option>Ago-Iwoye</option><option>Sagamu</option><option>Aiyetoro</option><option>Ibogun</option></select><label for="volInterest">Area of interest *</label><select id="volInterest" required><option value="">Choose an area</option><option>Health awareness and outreach</option><option>First aid education</option><option>Publicity and communications</option><option>Event planning</option><option>Design and digital support</option><option>Other</option></select><button class="button button-light full-width" type="submit">Prepare volunteer request ↗</button><div id="volunteerStatus" class="form-status light-status" aria-live="polite"></div><p class="form-footnote light-footnote">Prototype only: this form does not send or store information yet.</p></form></div>
-<div class="join-form">
+      <form class="join-form" id="volunteerForm">
+  <label for="volName">Name *</label>
+  <input
+    id="volName"
+    name="name"
+    required
+    maxlength="80"
+    placeholder="Your name"
+  >
+
+  <label for="volCampus">Campus *</label>
+  <select id="volCampus" name="campus" required>
+    <option value="">Select campus</option>
+    <option>Ago-Iwoye</option>
+    <option>Sagamu</option>
+    <option>Aiyetoro</option>
+    <option>Ibogun</option>
+  </select>
+
+  <label for="volInterest">Area of interest *</label>
+  <select id="volInterest" name="interest" required>
+    <option value="">Choose an area</option>
+    <option>Health awareness and outreach</option>
+    <option>First aid education</option>
+    <option>Publicity and communications</option>
+    <option>Event planning</option>
+    <option>Design and digital support</option>
+    <option>Other</option>
+  </select>
+
+  <button
+    class="button button-light full-width"
+    type="submit"
+  >
+    Prepare volunteer request ↗
+  </button>
+
+  <div
+    id="volunteerStatus"
+    class="form-status light-status"
+    aria-live="polite"
+  ></div>
+
+  <p class="form-footnote light-footnote">
+    Complete your details here, then continue to the official
+    volunteer registration form.
+  </p>
+</form>
   <h3>Join the Health Hub Team</h3>
   <p>
     Interested in health awareness, outreach, first aid education,
