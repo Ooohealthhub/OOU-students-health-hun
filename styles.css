@@ -672,3 +672,36 @@ padding: 20px;
 border-radius: 18px;
 }
 }
+/* =====================================
+ABOUT THE OFFICE — DESIGN UPGRADE
+===================================== */
+.about-section {
+position: relative;
+padding-top: 80px;
+padding-bottom: 80px;
+}
+.about-section h2 {
+line-height: 1.2;
+letter-spacing: -0.8px;
+}
+.about-section p {
+line-height: 1.85;
+}
+.about-section img {
+max-width: 100%;
+height: auto;
+object-fit: contain;
+}
+.about-section .button {
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.about-section .button:hover {
+transform: translateY(-3px);
+box-shadow: 0 10px 24px rgba(30, 75, 40, 0.13);
+}
+@media (max-width: 768px) {
+.about-section {
+padding-top: 55px;
+padding-bottom: 55px;
+}
+}
