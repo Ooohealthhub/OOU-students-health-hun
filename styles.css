@@ -560,3 +560,58 @@ width: 100%;
 justify-content: center;
 }
 }
+/* =====================================
+VOLUNTEER SECTION — DESIGN UPGRADE
+===================================== */
+.join-section {
+position: relative;
+padding-top: 80px;
+padding-bottom: 80px;
+}
+.join-section h2 {
+line-height: 1.2;
+letter-spacing: -0.8px;
+}
+.join-section p {
+line-height: 1.85;
+}
+.join-section .button {
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.join-section .button:hover {
+transform: translateY(-3px);
+box-shadow: 0 10px 24px rgba(30, 75, 40, 0.13);
+}
+.join-section .join-form {
+border: 1px solid #e0ebe2;
+border-radius: 24px;
+background: linear-gradient(145deg, #ffffff, #f7fbf7);
+box-shadow: 0 16px 40px rgba(30, 75, 40, 0.07);
+padding: 28px;
+}
+.join-section input,
+.join-section select,
+.join-section textarea {
+width: 100%;
+max-width: 100%;
+border: 1px solid #d8e5da;
+border-radius: 12px;
+padding: 13px 15px;
+font: inherit;
+}
+.join-section input:focus,
+.join-section select:focus,
+.join-section textarea:focus {
+outline: 2px solid #a5d2ad;
+border-color: #39804b;
+}
+@media (max-width: 768px) {
+.join-section {
+padding-top: 55px;
+padding-bottom: 55px;
+}
+.join-section .join-form {
+padding: 20px;
+border-radius: 18px;
+}
+}
