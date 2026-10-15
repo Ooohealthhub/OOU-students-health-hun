@@ -133,3 +133,70 @@ width: min(330px, 100%);
 min-height: 350px;
 }
 }
+/* ===================================
+HEALTH HUB SERVICE CARDS UPGRADE
+=================================== */
+
+.service-card,
+.health-card,
+.feature-card {
+border: 1px solid #e2eee3;
+border-radius: 22px;
+background: #ffffff;
+padding: 26px;
+box-shadow: 0 8px 28px rgba(30, 75, 40, 0.06);
+transition: transform 0.25s ease, box-shadow 0.25s ease,
+border-color 0.25s ease;
+}
+
+.service-card:hover,
+.health-card:hover,
+.feature-card:hover {
+transform: translateY(-6px);
+box-shadow: 0 18px 38px rgba(30, 75, 40, 0.12);
+border-color: #9bcba2;
+}
+
+.service-card h3,
+.health-card h3,
+.feature-card h3 {
+color: #205b32;
+line-height: 1.4;
+margin-bottom: 12px;
+}
+
+.service-card p,
+.health-card p,
+.feature-card p {
+color: #617166;
+line-height: 1.75;
+}
+
+.service-card a,
+.health-card a,
+.feature-card a {
+color: #26743c;
+font-weight: 700;
+text-decoration: none;
+}
+
+.service-card a:hover,
+.health-card a:hover,
+.feature-card a:hover {
+text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+.service-card,
+.health-card,
+.feature-card {
+padding: 21px;
+border-radius: 18px;
+}
+
+.service-card:hover,
+.health-card:hover,
+.feature-card:hover {
+transform: none;
+}
+}
