@@ -749,3 +749,57 @@ padding-top: 40px;
 padding-bottom: 22px;
 }
 }
+/* =====================================
+CAMPUS DIRECTORY — VERTICAL LAYOUT
+===================================== */
+.campus-grid {
+display: grid;
+grid-template-columns: minmax(0, 1fr) !important;
+gap: 24px;
+width: 100%;
+}
+.campus-card {
+width: 100%;
+min-width: 0;
+box-sizing: border-box;
+padding: 30px;
+border-radius: 22px;
+}
+.campus-card h4 {
+margin-top: 18px;
+margin-bottom: 8px;
+color: #205b32;
+font-size: 1.05rem;
+line-height: 1.5;
+}
+.campus-card details {
+width: 100%;
+margin-top: 16px;
+border: 1px solid #dcebdd;
+border-radius: 14px;
+background: #f5faf5;
+overflow: hidden;
+}
+.campus-card summary {
+padding: 15px;
+color: #205b32;
+font-weight: 700;
+cursor: pointer;
+line-height: 1.6;
+}
+.campus-card .campus-process {
+padding: 0 16px 12px;
+}
+.campus-card .campus-process p {
+line-height: 1.8;
+margin-bottom: 16px;
+}
+@media (max-width: 768px) {
+.campus-grid {
+gap: 18px;
+}
+.campus-card {
+padding: 22px;
+border-radius: 18px;
+}
+}
