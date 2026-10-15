@@ -503,3 +503,60 @@ border-radius: 18px;
 transform: none;
 }
 }
+/* =====================================
+ASK A HEALTH QUESTION — DESIGN UPGRADE
+===================================== */
+.ask-section {
+position: relative;
+padding-top: 80px;
+padding-bottom: 80px;
+}
+.ask-copy h2 {
+line-height: 1.2;
+letter-spacing: -0.8px;
+}
+.ask-copy > p:not(.eyebrow) {
+line-height: 1.85;
+}
+.privacy-points {
+display: grid;
+gap: 12px;
+margin-top: 24px;
+}
+.privacy-points span {
+display: flex;
+align-items: flex-start;
+gap: 10px;
+color: #365d40;
+line-height: 1.65;
+}
+.ask-section .button {
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.ask-section .button:hover {
+transform: translateY(-2px);
+box-shadow: 0 10px 24px rgba(30, 75, 40, 0.13);
+}
+.ask-section .form-intro {
+color: #285e38;
+font-weight: 700;
+line-height: 1.7;
+}
+.ask-section .form-footnote {
+color: #6b786f;
+font-size: 0.85rem;
+line-height: 1.7;
+}
+@media (max-width: 768px) {
+.ask-section {
+padding-top: 55px;
+padding-bottom: 55px;
+}
+.privacy-points {
+gap: 10px;
+}
+.ask-section .button {
+width: 100%;
+justify-content: center;
+}
+}
