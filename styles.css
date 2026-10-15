@@ -705,3 +705,47 @@ padding-top: 55px;
 padding-bottom: 55px;
 }
 }
+/* =====================================
+HEALTH HUB FOOTER — DESIGN UPGRADE
+===================================== */
+.site-footer {
+position: relative;
+padding-top: 55px;
+padding-bottom: 25px;
+background: linear-gradient(145deg, #123c24, #1d5631);
+color: #f4faf5;
+}
+.site-footer h2,
+.site-footer h3,
+.site-footer strong {
+color: #ffffff;
+}
+.site-footer p {
+color: #d5e6d8;
+line-height: 1.8;
+}
+.site-footer a {
+color: #e0f2e3;
+text-decoration: none;
+transition: color 0.2s ease;
+}
+.site-footer a:hover {
+color: #ffffff;
+text-decoration: underline;
+}
+.site-footer img {
+max-width: 100%;
+height: auto;
+object-fit: contain;
+}
+.site-footer hr {
+border: 0;
+border-top: 1px solid rgba(255, 255, 255, 0.18);
+margin: 28px 0 18px;
+}
+@media (max-width: 768px) {
+.site-footer {
+padding-top: 40px;
+padding-bottom: 22px;
+}
+}
