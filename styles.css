@@ -136,7 +136,6 @@ min-height: 350px;
 /* ===================================
 HEALTH HUB SERVICE CARDS UPGRADE
 =================================== */
-
 .service-card,
 .health-card,
 .feature-card {
@@ -148,7 +147,6 @@ box-shadow: 0 8px 28px rgba(30, 75, 40, 0.06);
 transition: transform 0.25s ease, box-shadow 0.25s ease,
 border-color 0.25s ease;
 }
-
 .service-card:hover,
 .health-card:hover,
 .feature-card:hover {
@@ -156,7 +154,6 @@ transform: translateY(-6px);
 box-shadow: 0 18px 38px rgba(30, 75, 40, 0.12);
 border-color: #9bcba2;
 }
-
 .service-card h3,
 .health-card h3,
 .feature-card h3 {
@@ -164,14 +161,12 @@ color: #205b32;
 line-height: 1.4;
 margin-bottom: 12px;
 }
-
 .service-card p,
 .health-card p,
 .feature-card p {
 color: #617166;
 line-height: 1.75;
 }
-
 .service-card a,
 .health-card a,
 .feature-card a {
@@ -179,13 +174,11 @@ color: #26743c;
 font-weight: 700;
 text-decoration: none;
 }
-
 .service-card a:hover,
 .health-card a:hover,
 .feature-card a:hover {
 text-decoration: underline;
 }
-
 @media (max-width: 768px) {
 .service-card,
 .health-card,
@@ -193,10 +186,99 @@ text-decoration: underline;
 padding: 21px;
 border-radius: 18px;
 }
-
 .service-card:hover,
 .health-card:hover,
 .feature-card:hover {
+transform: none;
+}
+}
+/* =====================================
+OOU HEALTH HUB — CARD DESIGN UPGRADE
+===================================== */
+
+/* Quick navigation cards */
+.quick-card {
+position: relative;
+border: 1px solid #e2eee4;
+border-radius: 20px;
+background: linear-gradient(145deg, #ffffff, #f7fbf7);
+box-shadow: 0 8px 24px rgba(30, 75, 40, 0.06);
+transition: transform 0.25s ease, box-shadow 0.25s ease,
+border-color 0.25s ease;
+}
+.quick-card:hover {
+transform: translateY(-5px);
+border-color: #a5d2ad;
+box-shadow: 0 16px 32px rgba(30, 75, 40, 0.12);
+}
+.quick-card strong {
+color: #205b32;
+}
+.quick-card small {
+line-height: 1.7;
+}
+.quick-icon {
+border-radius: 15px;
+transition: transform 0.25s ease;
+}
+.quick-card:hover .quick-icon {
+transform: scale(1.06);
+}
+.card-arrow {
+transition: transform 0.25s ease;
+}
+.quick-card:hover .card-arrow {
+transform: translate(3px, -3px);
+}
+/* Health education resource cards */
+.resource-card {
+border-radius: 24px;
+box-shadow: 0 10px 28px rgba(30, 75, 40, 0.07);
+transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.resource-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 18px 36px rgba(30, 75, 40, 0.12);
+}
+.resource-card h3 {
+line-height: 1.4;
+}
+.resource-card p {
+line-height: 1.8;
+}
+.resource-card a {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+font-weight: 700;
+}
+/* Campus directory cards */
+.campus-card {
+border: 1px solid #e0ebe1;
+border-radius: 20px;
+background: #ffffff;
+box-shadow: 0 8px 24px rgba(30, 75, 40, 0.05);
+transition: transform 0.25s ease, box-shadow 0.25s ease,
+border-color 0.25s ease;
+}
+.campus-card:hover {
+transform: translateY(-4px);
+border-color: #a5d2ad;
+box-shadow: 0 16px 30px rgba(30, 75, 40, 0.10);
+}
+.campus-card a {
+font-weight: 700;
+line-height: 1.7;
+}
+@media (max-width: 768px) {
+.quick-card,
+.resource-card,
+.campus-card {
+border-radius: 18px;
+}
+.quick-card:hover,
+.resource-card:hover,
+.campus-card:hover {
 transform: none;
 }
 }
