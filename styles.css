@@ -282,3 +282,122 @@ border-radius: 18px;
 transform: none;
 }
 }
+/* =====================================
+PROGRAMMES & EVENTS DESIGN UPGRADE
+===================================== */
+
+.events-section {
+position: relative;
+overflow: hidden;
+}
+.events-copy h2 {
+line-height: 1.2;
+letter-spacing: -0.8px;
+}
+.events-copy > p:not(.eyebrow) {
+line-height: 1.85;
+}
+.event-panel {
+border: 1px solid #e0ebe2;
+border-radius: 26px;
+background: linear-gradient(145deg, #ffffff, #f8fbf8);
+box-shadow: 0 18px 45px rgba(30, 75, 40, 0.08);
+padding: 28px;
+}
+.panel-header {
+padding-bottom: 22px;
+margin-bottom: 8px;
+border-bottom: 1px solid #e6eee7;
+}
+.panel-kicker {
+color: #39804b;
+font-size: 0.75rem;
+font-weight: 800;
+letter-spacing: 1.5px;
+}
+.panel-header h3 {
+margin-top: 8px;
+line-height: 1.4;
+}
+.calendar-icon {
+display: inline-grid;
+place-items: center;
+width: 48px;
+height: 48px;
+border-radius: 15px;
+background: #e8f5e9;
+color: #287541;
+font-size: 1.4rem;
+}
+.event-item {
+display: flex;
+align-items: flex-start;
+gap: 18px;
+padding: 22px 0;
+border-bottom: 1px solid #e8eee8;
+transition: padding-left 0.2s ease;
+}
+.event-item:last-of-type {
+border-bottom: none;
+}
+.event-item:hover {
+padding-left: 5px;
+}
+.event-date {
+display: grid;
+place-items: center;
+flex-shrink: 0;
+width: 46px;
+height: 46px;
+border-radius: 14px;
+background: #eaf5ec;
+color: #26743c;
+font-weight: 800;
+}
+.event-item strong {
+display: block;
+color: #204d2d;
+line-height: 1.5;
+}
+.event-item p {
+margin: 7px 0;
+color: #627166;
+line-height: 1.75;
+}
+.status-pill {
+display: inline-block;
+margin-top: 5px;
+padding: 6px 10px;
+border-radius: 20px;
+background: #edf7ed;
+color: #347644;
+font-size: 0.75rem;
+font-weight: 700;
+}
+.small-note {
+margin-top: 18px;
+padding: 14px;
+border-radius: 12px;
+background: #f0f5f0;
+color: #617166;
+font-size: 0.85rem;
+line-height: 1.7;
+}
+@media (max-width: 768px) {
+.event-panel {
+padding: 20px;
+border-radius: 20px;
+}
+.event-item {
+gap: 13px;
+padding: 18px 0;
+}
+.event-item:hover {
+padding-left: 0;
+}
+.event-date {
+width: 40px;
+height: 40px;
+border-radius: 12px;
+}
+}
