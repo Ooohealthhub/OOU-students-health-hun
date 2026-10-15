@@ -33,3 +33,14 @@
     min-height: 350px;
   }
 }
+/* Temporary test for the missing homepage card */
+.hero-visual .visual-card {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  z-index: 10 !important;
+  background: #ffffff !important;
+  color: #17251f !important;
+  min-height: 370px;
+}
