@@ -401,3 +401,105 @@ height: 40px;
 border-radius: 12px;
 }
 }
+/* =====================================
+HEALTHCARE DIRECTORY DESIGN UPGRADE
+===================================== */
+.directory-section {
+position: relative;
+padding-top: 80px;
+padding-bottom: 80px;
+}
+.directory-layout > div:first-child h2 {
+line-height: 1.25;
+letter-spacing: -0.7px;
+}
+.directory-layout > div:first-child > p:not(.eyebrow) {
+line-height: 1.85;
+}
+.campus-grid {
+gap: 22px;
+}
+.campus-card {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+min-width: 0;
+padding: 25px;
+border: 1px solid #e0ebe2;
+border-radius: 22px;
+background: linear-gradient(145deg, #ffffff, #f8fbf8);
+box-shadow: 0 8px 24px rgba(30, 75, 40, 0.06);
+transition: border-color 0.25s ease, box-shadow 0.25s ease,
+transform 0.25s ease;
+}
+.campus-card:hover {
+border-color: #a5d2ad;
+box-shadow: 0 16px 32px rgba(30, 75, 40, 0.10);
+transform: translateY(-4px);
+}
+.campus-card > span {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+width: 40px;
+height: 40px;
+margin-bottom: 16px;
+border-radius: 12px;
+background: #e8f5e9;
+color: #26743c;
+font-size: 0.85rem;
+font-weight: 800;
+}
+.campus-card > strong {
+margin-bottom: 5px;
+color: #205b32;
+font-size: 1.15rem;
+line-height: 1.4;
+}
+.campus-card > small {
+color: #39804b;
+font-weight: 700;
+}
+.campus-card > p {
+flex-grow: 1;
+color: #617166;
+line-height: 1.75;
+overflow-wrap: anywhere;
+}
+.campus-card > a {
+display: inline-block;
+margin-top: 12px;
+color: #26743c;
+font-weight: 700;
+line-height: 1.7;
+text-decoration: none;
+}
+.campus-card > a:hover {
+text-decoration: underline;
+}
+.directory-disclaimer {
+grid-column: 1 / -1;
+padding: 16px 18px;
+border-left: 4px solid #6aa879;
+border-radius: 10px;
+background: #f0f7f1;
+color: #52665a;
+font-size: 0.9rem;
+line-height: 1.8;
+}
+@media (max-width: 768px) {
+.directory-section {
+padding-top: 55px;
+padding-bottom: 55px;
+}
+.campus-grid {
+gap: 16px;
+}
+.campus-card {
+padding: 21px;
+border-radius: 18px;
+}
+.campus-card:hover {
+transform: none;
+}
+}
