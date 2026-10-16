@@ -921,3 +921,42 @@ border-radius: 18px;
     margin-left: 26px;
   }
 }
+/* Medical Director Profile Photo */
+.director-photo {
+width: 85px;
+height: 85px;
+object-fit: cover;
+border-radius: 50%;
+display: block;
+border: 3px solid #e0f2f1;
+flex-shrink: 0;
+}
+.director-profile {
+display: flex;
+align-items: center;
+gap: 16px;
+flex-wrap: wrap;
+}
+.director-profile-info {
+flex: 1;
+min-width: 150px;
+}
+.director-profile-info strong {
+display: block;
+font-size: 1rem;
+margin-bottom: 5px;
+}
+.director-profile-info p {
+margin: 0;
+font-size: 0.9rem;
+line-height: 1.5;
+}
+@media (max-width: 600px) {
+.director-photo {
+width: 70px;
+height: 70px;
+}
+.director-profile {
+    gap: 12px;
+}
+}
